@@ -1,10 +1,16 @@
+using FluentValidation.AspNetCore;
+using LmApp.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Reflection;
+using System.Text.Json.Serialization;
 
 namespace LmApp
 {
@@ -26,6 +32,29 @@ namespace LmApp
             {
                 configuration.RootPath = "wwwroot/dist";
             });
+
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                    .AddDefaultTokenProviders()
+                    .AddEntityFrameworkStores<ToolDbContext>();
+
+            services.AddDbContext<ToolDbContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("LmAppDbConnectionString"));
+            });
+
+            services
+                .AddControllers()
+                .AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+                    options.JsonSerializerOptions.IgnoreNullValues = true;
+                })
+                .AddFluentValidation(fv => fv.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly()));
+
+
+
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

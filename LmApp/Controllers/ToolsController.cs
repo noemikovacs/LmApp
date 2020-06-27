@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using LmApp.Models;
+using LmApp.ViewModels;
 
 namespace LmApp.Controllers
 {
@@ -24,21 +25,31 @@ namespace LmApp.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Tool>>> GetTools()
         {
-            return await _context.Tools.ToListAsync();
+            {
+                IQueryable<Tool> result = _context.Tools;
+
+                var resultList = await result
+                 .Include(f => f.Licenses)
+                 .ToListAsync();
+                return resultList;
+            }
         }
 
         // GET: api/Tools/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Tool>> GetTool(long id)
+        public async Task<ActionResult<ToolDetails>> GetTool(long id)
         {
-            var tool = await _context.Tools.FindAsync(id);
+            var tool = await _context
+                .Tools
+                .Include(f => f.Licenses)
+                .FirstOrDefaultAsync(f => f.Id == id);
 
             if (tool == null)
             {
                 return NotFound();
             }
 
-            return tool;
+            return ToolDetails.FromTool(tool);
         }
 
         // PUT: api/Tools/5

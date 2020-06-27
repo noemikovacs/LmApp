@@ -25,9 +25,10 @@ namespace LmApp.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<LicenseEmployee>()
-                .HasIndex(f => new { f.LicenseId, f.EmployeeId })
-                .IsUnique(true);
+            modelBuilder.Entity<License>()
+                .HasOne(f => f.Tool)
+                .WithMany(f => f.Licenses)
+                .HasForeignKey(f => f.FKTool);
         }
 
     }

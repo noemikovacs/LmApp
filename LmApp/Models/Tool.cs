@@ -10,6 +10,7 @@ namespace LmApp.Models
         public long Id { get; set; }
         public string Name { get; set; }
         public string Vendor { get; set; }
-        public List<License> Licenses{ get; set; }
+
+        public List<License> Licenses { get; set; }
     }
 }

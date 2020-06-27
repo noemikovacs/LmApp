@@ -25,6 +25,8 @@ namespace LmApp.Controllers
         public async Task<ActionResult<IEnumerable<License>>> GetLicenses()
         {
             return await _context.Licenses.ToListAsync();
+
+
         }
 
         // GET: api/Licenses/5

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LmApp.Migrations
 {
     [DbContext(typeof(ToolDbContext))]
-    [Migration("20200625164039_CreateAllTables")]
-    partial class CreateAllTables
+    [Migration("20200627161254_LicenseModify")]
+    partial class LicenseModify
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -46,18 +46,18 @@ namespace LmApp.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<long?>("ToolId")
-                        .HasColumnType("bigint");
-
-                    b.Property<DateTime>("expirationDate")
+                    b.Property<DateTime>("ExpirationDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("serialNr")
+                    b.Property<long>("FKTool")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("SerialNr")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ToolId");
+                    b.HasIndex("FKTool");
 
                     b.ToTable("Licenses");
                 });
@@ -79,8 +79,7 @@ namespace LmApp.Migrations
 
                     b.HasIndex("EmployeeId");
 
-                    b.HasIndex("LicenseId", "EmployeeId")
-                        .IsUnique();
+                    b.HasIndex("LicenseId");
 
                     b.ToTable("LicenseEmployee");
                 });
@@ -301,9 +300,11 @@ namespace LmApp.Migrations
 
             modelBuilder.Entity("LmApp.Models.License", b =>
                 {
-                    b.HasOne("LmApp.Models.Tool", null)
+                    b.HasOne("LmApp.Models.Tool", "Tool")
                         .WithMany("Licenses")
-                        .HasForeignKey("ToolId");
+                        .HasForeignKey("FKTool")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("LmApp.Models.LicenseEmployee", b =>

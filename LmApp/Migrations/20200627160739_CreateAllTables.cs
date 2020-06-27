@@ -186,19 +186,19 @@ namespace LmApp.Migrations
                 {
                     Id = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    serialNr = table.Column<string>(nullable: true),
-                    expirationDate = table.Column<DateTime>(nullable: false),
-                    ToolId = table.Column<long>(nullable: true)
+                    SerialNr = table.Column<string>(nullable: true),
+                    ExpirationDate = table.Column<DateTime>(nullable: false),
+                    FKTool = table.Column<long>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Licenses", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Licenses_Tools_ToolId",
-                        column: x => x.ToolId,
+                        name: "FK_Licenses_Tools_FKTool",
+                        column: x => x.FKTool,
                         principalTable: "Tools",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -272,15 +272,14 @@ namespace LmApp.Migrations
                 column: "EmployeeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_LicenseEmployee_LicenseId_EmployeeId",
+                name: "IX_LicenseEmployee_LicenseId",
                 table: "LicenseEmployee",
-                columns: new[] { "LicenseId", "EmployeeId" },
-                unique: true);
+                column: "LicenseId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Licenses_ToolId",
+                name: "IX_Licenses_FKTool",
                 table: "Licenses",
-                column: "ToolId");
+                column: "FKTool");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

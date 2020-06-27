@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LmApp</name>
+    </assembly>
+    <members>
+        <member name="M:LmApp.Controllers.EmployeesController.GetEmployees">
+            <summary>
+            Gets a list of all the employees
+            </summary>
+            <returns>A list of Employee objects. </returns>
+        </member>
+        <member name="M:LmApp.Controllers.EmployeesController.GetEmployee(System.Int64)">
+            <summary>
+            Get an employee with an unique id
+            </summary>
+            <param name="id">The ID for the employee we're searching for</param>
+            <returns>An employee with the given id</returns>
+        </member>
+        <member name="M:LmApp.Controllers.EmployeesController.PutEmployee(System.Int64,LmApp.Models.Employee)">
+            <summary>
+            Add or Update an Employee
+            </summary>
+            <param name="id">The ID for the employee we're searching for</param>
+            <param name="employee"></param>
+            <returns>The updated or created Employee</returns>
+        </member>
+        <member name="M:LmApp.Controllers.EmployeesController.PostEmployee(LmApp.Models.Employee)">
+            <summary>
+            Add/Create a new Employee
+            </summary>
+            <param name="employee">The employee we want to add </param>
+            <returns>the added employee</returns>
+        </member>
+        <member name="M:LmApp.Controllers.EmployeesController.DeleteEmployee(System.Int64)">
+            <summary>
+            Delete an employee with a certain id
+            </summary>
+            <param name="id">The ID for the employee we're searching for</param>
+            <returns>The deleted employee</returns>
+        </member>
+        <member name="M:LmApp.Controllers.LicenseEmployeesController.GetLicenseEmployee">
+            <summary>
+            A common class for Employees and Licenses
+            </summary>
+            <returns>The vendor, the license name or s/n and emlpoyee name</returns>
+        </member>
+        <member name="M:LmApp.Controllers.LicenseEmployeesController.GetLicenseEmployee(System.Int64)">
+            <summary>
+            Returns data with an unique id
+            </summary>
+            <param name="id">The ID we're searching for</param>
+            <returns>List of datas</returns>
+        </member>
+        <member name="M:LmApp.Controllers.LicenseEmployeesController.PutLicenseEmployee(System.Int64,LmApp.Models.LicenseEmployee)">
+            <summary>
+            Add or create relationship between Employee and License
+            </summary>
+            <param name="id">The ID we're searching for</param>
+            <returns></returns>
+        </member>
+        <member name="M:LmApp.Controllers.LicenseEmployeesController.PostLicenseEmployee(LmApp.Models.LicenseEmployee)">
+            <summary>
+            Add or create a new entry
+            </summary>
+            <param name="licenseEmployee"></param>
+            <returns>Relationship between Employee and License</returns>
+        </member>
+        <member name="M:LmApp.Controllers.LicenseEmployeesController.DeleteLicenseEmployee(System.Int64)">
+            <summary>
+            Delete a relationship between License and Employee
+            </summary>
+            <param name="id">The ID we're searching for</param>
+            <returns>The deleted item</returns>
+        </member>
+        <member name="M:LmApp.Controllers.LicensesController.GetLicenses">
+            <summary>
+             List of licenses
+            </summary>
+            <returns>Returns all of the license</returns>
+        </member>
+        <member name="M:LmApp.Controllers.LicensesController.GetLicense(System.Int64)">
+            <summary>
+            Get a License with an unique id
+            </summary>
+            <param name="id">The ID for the license we're searching for</param>
+            <returns>The serched license with the given id</returns>
+        </member>
+        <member name="M:LmApp.Controllers.LicensesController.PutLicense(System.Int64,LmApp.Models.License)">
+            <summary>
+            Add or Update a License
+            </summary>
+            <param name="id">The ID for the license we're searching for</param>
+            <param name="license"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LmApp.Controllers.LicensesController.PostLicense(LmApp.Models.License)">
+            <summary>
+            Add/create a new License
+            </summary>
+            <param name="license">the License we want to add</param>
+            <returns>The added license</returns>
+        </member>
+        <member name="M:LmApp.Controllers.LicensesController.DeleteLicense(System.Int64)">
+            <summary>
+            Delete a license with a certain id
+            </summary>
+            <param name="id">The ID for the license we're searching for</param>
+            <returns>The deleted license</returns>
+        </member>
+        <member name="M:LmApp.Controllers.ToolsController.GetTools">
+            <summary>
+            Gets a list of all the tools
+            </summary>
+            <returns>A list of Tool objects.</returns> 
+        </member>
+        <member name="M:LmApp.Controllers.ToolsController.GetTool(System.Int64)">
+            <summary>
+            Gets tools with an unique id
+            </summary>
+            <param name="id">The ID for the tool we're searching for</param>
+            <returns>A tool with the given id</returns>
+        </member>
+        <member name="M:LmApp.Controllers.ToolsController.PutTool(System.Int64,LmApp.Models.Tool)">
+            <summary>
+            Add or Update a Tool
+            </summary>
+            <param name="id">The ID of the Tool </param>
+            <param name="tool"></param>
+            <returns>The updated or created Tool</returns>
+        </member>
+        <member name="M:LmApp.Controllers.ToolsController.PostTool(LmApp.Models.Tool)">
+            <summary>
+            Add a Tool 
+            </summary>
+            <param name="tool">The tool we want to add</param>
+            <returns>The added tool</returns>
+        </member>
+        <member name="M:LmApp.Controllers.ToolsController.DeleteTool(System.Int64)">
+            <summary>
+            Delete a tool with a certain id
+            </summary>
+            <param name="id">Id for the movie we want to delete</param>
+            <returns>The deleted tool</returns>
+        </member>
+    </members>
+</doc>

@@ -21,6 +21,10 @@ namespace LmApp.Controllers
         }
 
         // GET: api/Employees
+        /// <summary>
+        /// Gets a list of all the employees
+        /// </summary>
+        /// <returns>A list of Employee objects. </returns>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Employee>>> GetEmployees()
         {
@@ -28,6 +32,11 @@ namespace LmApp.Controllers
         }
 
         // GET: api/Employees/5
+        /// <summary>
+        /// Get an employee with an unique id
+        /// </summary>
+        /// <param name="id">The ID for the employee we're searching for</param>
+        /// <returns>An employee with the given id</returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<Employee>> GetEmployee(long id)
         {
@@ -42,6 +51,12 @@ namespace LmApp.Controllers
         }
 
         // PUT: api/Employees/5
+        /// <summary>
+        /// Add or Update an Employee
+        /// </summary>
+        /// <param name="id">The ID for the employee we're searching for</param>
+        /// <param name="employee"></param>
+        /// <returns>The updated or created Employee</returns>
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
@@ -74,6 +89,11 @@ namespace LmApp.Controllers
         }
 
         // POST: api/Employees
+        /// <summary>
+        /// Add/Create a new Employee
+        /// </summary>
+        /// <param name="employee">The employee we want to add </param>
+        /// <returns>the added employee</returns>
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
@@ -86,6 +106,11 @@ namespace LmApp.Controllers
         }
 
         // DELETE: api/Employees/5
+        /// <summary>
+        /// Delete an employee with a certain id
+        /// </summary>
+        /// <param name="id">The ID for the employee we're searching for</param>
+        /// <returns>The deleted employee</returns>
         [HttpDelete("{id}")]
         public async Task<ActionResult<Employee>> DeleteEmployee(long id)
         {

@@ -22,6 +22,10 @@ namespace LmApp.Controllers
         }
 
         // GET: api/Tools
+        /// <summary>
+        /// Gets a list of all the tools
+        /// </summary>
+        /// <returns>A list of Tool objects.</returns> 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Tool>>> GetTools()
         {
@@ -36,6 +40,11 @@ namespace LmApp.Controllers
         }
 
         // GET: api/Tools/5
+        /// <summary>
+        /// Gets tools with an unique id
+        /// </summary>
+        /// <param name="id">The ID for the tool we're searching for</param>
+        /// <returns>A tool with the given id</returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<ToolDetails>> GetTool(long id)
         {
@@ -53,6 +62,12 @@ namespace LmApp.Controllers
         }
 
         // PUT: api/Tools/5
+        /// <summary>
+        /// Add or Update a Tool
+        /// </summary>
+        /// <param name="id">The ID of the Tool </param>
+        /// <param name="tool"></param>
+        /// <returns>The updated or created Tool</returns>
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
@@ -85,6 +100,11 @@ namespace LmApp.Controllers
         }
 
         // POST: api/Tools
+       /// <summary>
+       /// Add a Tool 
+       /// </summary>
+       /// <param name="tool">The tool we want to add</param>
+       /// <returns>The added tool</returns>
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
@@ -97,6 +117,11 @@ namespace LmApp.Controllers
         }
 
         // DELETE: api/Tools/5
+        /// <summary>
+        /// Delete a tool with a certain id
+        /// </summary>
+        /// <param name="id">Id for the movie we want to delete</param>
+        /// <returns>The deleted tool</returns>
         [HttpDelete("{id}")]
         public async Task<ActionResult<Tool>> DeleteTool(long id)
         {

@@ -21,6 +21,10 @@ namespace LmApp.Controllers
         }
 
         // GET: api/LicenseEmployees
+        /// <summary>
+        /// A common class for Employees and Licenses
+        /// </summary>
+        /// <returns>The vendor, the license name or s/n and emlpoyee name</returns>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<LicenseEmployee>>> GetLicenseEmployee()
         {
@@ -35,6 +39,11 @@ namespace LmApp.Controllers
         }
 
         // GET: api/LicenseEmployees/5
+        /// <summary>
+        /// Returns data with an unique id
+        /// </summary>
+        /// <param name="id">The ID we're searching for</param>
+        /// <returns>List of datas</returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<LicenseEmployee>> GetLicenseEmployee(long id)
         {
@@ -49,6 +58,11 @@ namespace LmApp.Controllers
         }
 
         // PUT: api/LicenseEmployees/5
+        /// <summary>
+        /// Add or create relationship between Employee and License
+        /// </summary>
+        /// <param name="id">The ID we're searching for</param>
+        /// <returns></returns>
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
@@ -81,6 +95,11 @@ namespace LmApp.Controllers
         }
 
         // POST: api/LicenseEmployees
+        /// <summary>
+        /// Add or create a new entry
+        /// </summary>
+        /// <param name="licenseEmployee"></param>
+        /// <returns>Relationship between Employee and License</returns>
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
@@ -107,6 +126,11 @@ namespace LmApp.Controllers
         }
 
         // DELETE: api/LicenseEmployees/5
+        /// <summary>
+        /// Delete a relationship between License and Employee
+        /// </summary>
+        /// <param name="id">The ID we're searching for</param>
+        /// <returns>The deleted item</returns>
         [HttpDelete("{id}")]
         public async Task<ActionResult<LicenseEmployee>> DeleteLicenseEmployee(long id)
         {

@@ -21,6 +21,10 @@ namespace LmApp.Controllers
         }
 
         // GET: api/Licenses
+        /// <summary>
+        ///  List of licenses
+        /// </summary>
+        /// <returns>Returns all of the license</returns>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<License>>> GetLicenses()
         {
@@ -30,6 +34,11 @@ namespace LmApp.Controllers
         }
 
         // GET: api/Licenses/5
+        /// <summary>
+        /// Get a License with an unique id
+        /// </summary>
+        /// <param name="id">The ID for the license we're searching for</param>
+        /// <returns>The serched license with the given id</returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<License>> GetLicense(long id)
         {
@@ -44,6 +53,12 @@ namespace LmApp.Controllers
         }
 
         // PUT: api/Licenses/5
+        /// <summary>
+        /// Add or Update a License
+        /// </summary>
+        /// <param name="id">The ID for the license we're searching for</param>
+        /// <param name="license"></param>
+        /// <returns></returns>
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
@@ -76,6 +91,11 @@ namespace LmApp.Controllers
         }
 
         // POST: api/Licenses
+        /// <summary>
+        /// Add/create a new License
+        /// </summary>
+        /// <param name="license">the License we want to add</param>
+        /// <returns>The added license</returns>
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
@@ -88,6 +108,11 @@ namespace LmApp.Controllers
         }
 
         // DELETE: api/Licenses/5
+        /// <summary>
+        /// Delete a license with a certain id
+        /// </summary>
+        /// <param name="id">The ID for the license we're searching for</param>
+        /// <returns>The deleted license</returns>
         [HttpDelete("{id}")]
         public async Task<ActionResult<License>> DeleteLicense(long id)
         {

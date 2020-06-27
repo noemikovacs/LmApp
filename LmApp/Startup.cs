@@ -33,9 +33,9 @@ namespace LmApp
                 configuration.RootPath = "wwwroot/dist";
             });
 
-            services.AddIdentity<IdentityUser, IdentityRole>()
-                    .AddDefaultTokenProviders()
-                    .AddEntityFrameworkStores<ToolDbContext>();
+            //services.AddIdentity<IdentityUser, IdentityRole>()
+            //        .AddDefaultTokenProviders()
+            //        .AddEntityFrameworkStores<ToolDbContext>();
 
             services.AddDbContext<ToolDbContext>(options =>
             {
@@ -94,10 +94,10 @@ namespace LmApp
 
                 spa.Options.SourcePath = "wwwroot";
 
-                if (env.IsDevelopment())
-                {
-                    spa.UseAngularCliServer(npmScript: "start");
-                }
+                // if (env.IsDevelopment())
+                // {
+                    // spa.UseAngularCliServer(npmScript: "start");
+                // }
             });
         }
     }

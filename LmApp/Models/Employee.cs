@@ -11,5 +11,7 @@ namespace LmApp.Models
         public string Name { get; set; }
 
         public Position Position { get; set; }
+
+        public IList<LicenseEmployee> LicenseEmployees { get; set; }
     }
 }

@@ -14,5 +14,7 @@ namespace LmApp.Models
         public long FKTool { get; set; }
         [JsonIgnore]
         public Tool Tool { get; set; }
+
+        public IList<LicenseEmployee> LicenseEmployees { get; set; }
     }
 }

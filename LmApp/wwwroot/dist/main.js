@@ -48,7 +48,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1>License Management Application</h1>\r\n<img src=\"https://i.pinimg.com/564x/35/a5/2f/35a52f796b74b1d59c2088ea01fb1a78.jpg\" />\r\n\r\n\r\n<h3>About this project</h3>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac cursus ipsum. Phasellus commodo iaculis orci.\r\n    Fusce mi eros, euismod quis nisi non, laoreet porta ipsum. Praesent neque dui, vulputate eu nulla sit amet,\r\n    luctus tincidunt est. Duis gravida at lectus et vulputate. Sed congue leo id elit varius, ac varius quam posuere. Pellentesque egestas efficitur tincidunt. In sit amet risus elit. Sed libero nunc, fermentum eget augue eget, convallis elementum turpis. Fusce tincidunt malesuada leo vel semper. Proin sit amet sollicitudin lectus. Suspendisse in quam non eros egestas tristique.\r\n    Etiam laoreet, tortor nec rutrum hendrerit, enim eros cursus ligula, sit amet vestibulum nibh erat vitae elit. </p>\r\n\r\n<p>Welcome to my new single-page application, built with:</p>\r\n<ul>\r\n  <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>\r\n  <li><a href='https://angular.io/'>Angular</a> and <a href='http://www.typescriptlang.org/'>TypeScript</a> for client-side code</li>\r\n  <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>\r\n</ul>\r\n<p>To help you get started, we've also set up:</p>\r\n<ul>\r\n  <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>\r\n  <li><strong>Angular CLI integration</strong>. In development mode, there's no need to run <code>ng serve</code>. It runs in the background automatically, so your client-side resources are dynamically built on demand and the page refreshes when you modify any file.</li>\r\n  <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and your <code>dotnet publish</code> configuration automatically invokes <code>ng build</code> to produce minified, ahead-of-time compiled JavaScript files.</li>\r\n</ul>\r\n<p>The <code>ClientApp</code> subdirectory is a standard Angular CLI application. If you open a command prompt in that directory, you can run any <code>ng</code> command (e.g., <code>ng test</code>), or use <code>npm</code> to install extra packages into it.</p>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1>License Management Application</h1>\r\n<img src=\"https://i.pinimg.com/564x/35/a5/2f/35a52f796b74b1d59c2088ea01fb1a78.jpg\" />\r\n\r\n\r\n<h3>About this project</h3>\r\n<mat-slider>Slide me!</mat-slider>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac cursus ipsum. Phasellus commodo iaculis orci.\r\n    Fusce mi eros, euismod quis nisi non, laoreet porta ipsum. Praesent neque dui, vulputate eu nulla sit amet,\r\n    luctus tincidunt est. Duis gravida at lectus et vulputate. Sed congue leo id elit varius, ac varius quam posuere. Pellentesque egestas efficitur tincidunt. In sit amet risus elit. Sed libero nunc, fermentum eget augue eget, convallis elementum turpis. Fusce tincidunt malesuada leo vel semper. Proin sit amet sollicitudin lectus. Suspendisse in quam non eros egestas tristique.\r\n    Etiam laoreet, tortor nec rutrum hendrerit, enim eros cursus ligula, sit amet vestibulum nibh erat vitae elit. </p>\r\n\r\n<p>Welcome to my new single-page application, built with:</p>\r\n<ul>\r\n  <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>\r\n  <li><a href='https://angular.io/'>Angular</a> and <a href='http://www.typescriptlang.org/'>TypeScript</a> for client-side code</li>\r\n  <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>\r\n</ul>\r\n<p>To help you get started, we've also set up:</p>\r\n<ul>\r\n  <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>\r\n  <li><strong>Angular CLI integration</strong>. In development mode, there's no need to run <code>ng serve</code>. It runs in the background automatically, so your client-side resources are dynamically built on demand and the page refreshes when you modify any file.</li>\r\n  <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and your <code>dotnet publish</code> configuration automatically invokes <code>ng build</code> to produce minified, ahead-of-time compiled JavaScript files.</li>\r\n</ul>\r\n<p>The <code>ClientApp</code> subdirectory is a standard Angular CLI application. If you open a command prompt in that directory, you can run any <code>ng</code> command (e.g., <code>ng test</code>), or use <code>npm</code> to install extra packages into it.</p>\r\n");
 
 /***/ }),
 
@@ -140,11 +140,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _nav_menu_nav_menu_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./nav-menu/nav-menu.component */ "./src/app/nav-menu/nav-menu.component.ts");
-/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
-/* harmony import */ var _counter_counter_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./counter/counter.component */ "./src/app/counter/counter.component.ts");
-/* harmony import */ var _fetch_data_fetch_data_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./fetch-data/fetch-data.component */ "./src/app/fetch-data/fetch-data.component.ts");
+/* harmony import */ var _shared_angular_material_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shared/angular-material.module */ "./src/app/shared/angular-material.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _nav_menu_nav_menu_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./nav-menu/nav-menu.component */ "./src/app/nav-menu/nav-menu.component.ts");
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
+/* harmony import */ var _counter_counter_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./counter/counter.component */ "./src/app/counter/counter.component.ts");
+/* harmony import */ var _fetch_data_fetch_data_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./fetch-data/fetch-data.component */ "./src/app/fetch-data/fetch-data.component.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -164,29 +166,34 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
+
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         declarations: [
-            _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
-            _nav_menu_nav_menu_component__WEBPACK_IMPORTED_MODULE_6__["NavMenuComponent"],
-            _home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"],
-            _counter_counter_component__WEBPACK_IMPORTED_MODULE_8__["CounterComponent"],
-            _fetch_data_fetch_data_component__WEBPACK_IMPORTED_MODULE_9__["FetchDataComponent"]
+            _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
+            _nav_menu_nav_menu_component__WEBPACK_IMPORTED_MODULE_7__["NavMenuComponent"],
+            _home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"],
+            _counter_counter_component__WEBPACK_IMPORTED_MODULE_9__["CounterComponent"],
+            _fetch_data_fetch_data_component__WEBPACK_IMPORTED_MODULE_10__["FetchDataComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"].withServerTransition({ appId: 'ng-cli-universal' }),
             _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
             _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forRoot([
-                { path: '', component: _home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"], pathMatch: 'full' },
-                { path: 'counter', component: _counter_counter_component__WEBPACK_IMPORTED_MODULE_8__["CounterComponent"] },
-                { path: 'fetch-data', component: _fetch_data_fetch_data_component__WEBPACK_IMPORTED_MODULE_9__["FetchDataComponent"] },
-            ])
+                { path: '', component: _home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"], pathMatch: 'full' },
+                { path: 'counter', component: _counter_counter_component__WEBPACK_IMPORTED_MODULE_9__["CounterComponent"] },
+                { path: 'fetch-data', component: _fetch_data_fetch_data_component__WEBPACK_IMPORTED_MODULE_10__["FetchDataComponent"] },
+            ]),
+            _shared_angular_material_module__WEBPACK_IMPORTED_MODULE_5__["AngularMaterialModule"],
+            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_11__["BrowserAnimationsModule"]
         ],
+        exports: [_shared_angular_material_module__WEBPACK_IMPORTED_MODULE_5__["AngularMaterialModule"]],
         providers: [],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
     })
 ], AppModule);
 
@@ -378,6 +385,91 @@ NavMenuComponent = __decorate([
 
 /***/ }),
 
+/***/ "./src/app/shared/angular-material.module.ts":
+/*!***************************************************!*\
+  !*** ./src/app/shared/angular-material.module.ts ***!
+  \***************************************************/
+/*! exports provided: AngularMaterialModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AngularMaterialModule", function() { return AngularMaterialModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+let AngularMaterialModule = class AngularMaterialModule {
+};
+AngularMaterialModule = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSlideToggleModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSliderModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatToolbarModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSidenavModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatBadgeModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatListModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatGridListModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatFormFieldModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSelectModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatRadioModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDatepickerModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatNativeDateModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatChipsModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatInputModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatButtonModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatIconModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTooltipModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatPaginatorModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatProgressSpinnerModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatProgressBarModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatCardModule"]
+        ],
+        exports: [
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSlideToggleModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSliderModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatToolbarModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSidenavModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatBadgeModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatListModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatGridListModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatFormFieldModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSelectModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatRadioModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDatepickerModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatNativeDateModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatChipsModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatInputModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatButtonModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatIconModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTooltipModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatPaginatorModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatProgressSpinnerModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatProgressBarModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatCardModule"]
+        ],
+    })
+], AngularMaterialModule);
+
+
+
+/***/ }),
+
 /***/ "./src/environments/environment.ts":
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
@@ -418,13 +510,16 @@ const environment = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getBaseUrl", function() { return getBaseUrl; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/fesm2015/platform-browser-dynamic.js");
-/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/app.module */ "./src/app/app.module.ts");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! hammerjs */ "./node_modules/hammerjs/hammer.js");
+/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(hammerjs__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/fesm2015/platform-browser-dynamic.js");
+/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app/app.module */ "./src/app/app.module.ts");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./environments/environment */ "./src/environments/environment.ts");
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+
 
 
 
@@ -435,10 +530,10 @@ function getBaseUrl() {
 const providers = [
     { provide: 'BASE_URL', useFactory: getBaseUrl, deps: [] }
 ];
-if (_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].production) {
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["enableProdMode"])();
+if (_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].production) {
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["enableProdMode"])();
 }
-Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])(providers).bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])
+Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformBrowserDynamic"])(providers).bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_3__["AppModule"])
     .catch(err => console.log(err));
 
 

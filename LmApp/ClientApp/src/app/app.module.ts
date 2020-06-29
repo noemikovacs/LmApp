@@ -25,6 +25,9 @@ const routes: Routes = [
     { path: '', component: HomeComponent, pathMatch: 'full' },
     { path: 'counter', component: CounterComponent },
     { path: 'fetch-data', component: FetchDataComponent },
+    { path: 'tools', loadChildren: './tools/tools.module#ToolsModule' },
+    { path: 'employees', loadChildren: './employees/employees.module#EmployeesModule' },
+    { path: 'licenses', loadChildren: './licenses/licenses.module#LicensesModule' },
 ];
 
 

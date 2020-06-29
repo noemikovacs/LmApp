@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FlowersApp.Models.Account
+namespace LmApp.Models.Account
 {
     public class Token
     {

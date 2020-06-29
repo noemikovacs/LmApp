@@ -1,14 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LisensesEditComponent } from './lisenses-edit/lisenses-edit.component';
-import { LisensesListComponent } from './lisenses-list/lisenses-list.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { CoreModule } from '../core/core.module';
+import { AngularMaterialModule } from '../shared/angular-material.module';
+
+import { LicensesRoutingModule } from './licenses-routing.module';
+
+import { LicensesService } from './licenses.service';
 
 @NgModule({
-  declarations: [LisensesEditComponent, LisensesListComponent],
-  imports: [
-    CommonModule
-  ]
+    declarations: [LicensesRoutingModule.routedComponents],
+    imports: [
+        CommonModule,
+        LicensesRoutingModule,
+        AngularMaterialModule,
+        CoreModule,
+        FormsModule,
+        ReactiveFormsModule
+    ],
+    providers: [LicensesService],
 })
 export class LicensesModule { }

@@ -1,14 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ToolsEditComponent } from './tools-edit/tools-edit.component';
-import { ToolsListComponent } from './tools-list/tools-list.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { CoreModule } from '../core/core.module';
+import { AngularMaterialModule } from '../shared/angular-material.module';
+
+import { ToolsRoutingModule } from './tools-routing.module';
+
+import { ToolsService } from './tools.service';
 
 @NgModule({
-  declarations: [ToolsEditComponent, ToolsListComponent],
-  imports: [
-    CommonModule
-  ]
+    declarations: [ToolsRoutingModule.routedComponents],
+    imports: [
+        CommonModule,
+        ToolsRoutingModule,
+        AngularMaterialModule,
+        CoreModule,
+        FormsModule,
+        ReactiveFormsModule
+    ],
+    providers: [ToolsService],
 })
 export class ToolsModule { }

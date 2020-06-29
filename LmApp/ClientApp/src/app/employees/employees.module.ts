@@ -1,14 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { EmployeesEditComponent } from './employees-edit/employees-edit.component';
-import { EmployeesListComponent } from './employees-list/employees-list.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { CoreModule } from '../core/core.module';
+import { AngularMaterialModule } from '../shared/angular-material.module';
+
+import { EmployeesRoutingModule } from './employees-routing.module';
+
+import { EmployeesService } from './employees.service';
 
 @NgModule({
-  declarations: [EmployeesEditComponent, EmployeesListComponent],
-  imports: [
-    CommonModule
-  ]
+    declarations: [EmployeesRoutingModule.routedComponents],
+    imports: [
+        CommonModule,
+        EmployeesRoutingModule,
+        AngularMaterialModule,
+        CoreModule,
+        FormsModule,
+        ReactiveFormsModule
+    ],
+    providers: [EmployeesService],
 })
 export class EmployeesModule { }

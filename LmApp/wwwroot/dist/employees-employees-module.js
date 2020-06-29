@@ -1,0 +1,379 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["employees-employees-module"],{
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/employees/employees-edit/employees-edit.component.html":
+/*!**************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/employees/employees-edit/employees-edit.component.html ***!
+  \**************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>employees-edit works!</p>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/employees/employees-list/employees-list.component.html":
+/*!**************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/employees/employees-list/employees-list.component.html ***!
+  \**************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>employees-list works!</p>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/employees/employees.component.html":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/employees/employees.component.html ***!
+  \******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>employees works!</p>\n<router-outlet></router-outlet>\n");
+
+/***/ }),
+
+/***/ "./src/app/employees/employees-edit/employees-edit.component.css":
+/*!***********************************************************************!*\
+  !*** ./src/app/employees/employees-edit/employees-edit.component.css ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2VtcGxveWVlcy9lbXBsb3llZXMtZWRpdC9lbXBsb3llZXMtZWRpdC5jb21wb25lbnQuY3NzIn0= */");
+
+/***/ }),
+
+/***/ "./src/app/employees/employees-edit/employees-edit.component.ts":
+/*!**********************************************************************!*\
+  !*** ./src/app/employees/employees-edit/employees-edit.component.ts ***!
+  \**********************************************************************/
+/*! exports provided: EmployeesEditComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EmployeesEditComponent", function() { return EmployeesEditComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+let EmployeesEditComponent = class EmployeesEditComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+EmployeesEditComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-employees-edit',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./employees-edit.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/employees/employees-edit/employees-edit.component.html")).default,
+        styles: [__importDefault(__webpack_require__(/*! ./employees-edit.component.css */ "./src/app/employees/employees-edit/employees-edit.component.css")).default]
+    }),
+    __metadata("design:paramtypes", [])
+], EmployeesEditComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/employees/employees-list/employees-list.component.css":
+/*!***********************************************************************!*\
+  !*** ./src/app/employees/employees-list/employees-list.component.css ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2VtcGxveWVlcy9lbXBsb3llZXMtbGlzdC9lbXBsb3llZXMtbGlzdC5jb21wb25lbnQuY3NzIn0= */");
+
+/***/ }),
+
+/***/ "./src/app/employees/employees-list/employees-list.component.ts":
+/*!**********************************************************************!*\
+  !*** ./src/app/employees/employees-list/employees-list.component.ts ***!
+  \**********************************************************************/
+/*! exports provided: EmployeesListComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EmployeesListComponent", function() { return EmployeesListComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+let EmployeesListComponent = class EmployeesListComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+EmployeesListComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-employees-list',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./employees-list.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/employees/employees-list/employees-list.component.html")).default,
+        styles: [__importDefault(__webpack_require__(/*! ./employees-list.component.css */ "./src/app/employees/employees-list/employees-list.component.css")).default]
+    }),
+    __metadata("design:paramtypes", [])
+], EmployeesListComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/employees/employees-routing.module.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/employees/employees-routing.module.ts ***!
+  \*******************************************************/
+/*! exports provided: EmployeesRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EmployeesRoutingModule", function() { return EmployeesRoutingModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _employees_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./employees.component */ "./src/app/employees/employees.component.ts");
+/* harmony import */ var _employees_list_employees_list_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./employees-list/employees-list.component */ "./src/app/employees/employees-list/employees-list.component.ts");
+/* harmony import */ var _employees_edit_employees_edit_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./employees-edit/employees-edit.component */ "./src/app/employees/employees-edit/employees-edit.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+const routes = [
+    {
+        path: '', component: _employees_component__WEBPACK_IMPORTED_MODULE_2__["EmployeesComponent"],
+        children: [
+            { path: '', redirectTo: 'list', pathMatch: 'full' },
+            { path: 'list', component: _employees_list_employees_list_component__WEBPACK_IMPORTED_MODULE_3__["EmployeesListComponent"] },
+            { path: 'edit/:id', component: _employees_edit_employees_edit_component__WEBPACK_IMPORTED_MODULE_4__["EmployeesEditComponent"] },
+            { path: 'edit', component: _employees_edit_employees_edit_component__WEBPACK_IMPORTED_MODULE_4__["EmployeesEditComponent"] },
+        ]
+    }
+];
+let EmployeesRoutingModule = class EmployeesRoutingModule {
+};
+EmployeesRoutingModule.routedComponents = [_employees_component__WEBPACK_IMPORTED_MODULE_2__["EmployeesComponent"], _employees_list_employees_list_component__WEBPACK_IMPORTED_MODULE_3__["EmployeesListComponent"], _employees_edit_employees_edit_component__WEBPACK_IMPORTED_MODULE_4__["EmployeesEditComponent"]];
+EmployeesRoutingModule = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild(routes)],
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
+    })
+], EmployeesRoutingModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/employees/employees.component.css":
+/*!***************************************************!*\
+  !*** ./src/app/employees/employees.component.css ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2VtcGxveWVlcy9lbXBsb3llZXMuY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/employees/employees.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/employees/employees.component.ts ***!
+  \**************************************************/
+/*! exports provided: EmployeesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EmployeesComponent", function() { return EmployeesComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+let EmployeesComponent = class EmployeesComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+EmployeesComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-employees',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./employees.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/employees/employees.component.html")).default,
+        styles: [__importDefault(__webpack_require__(/*! ./employees.component.css */ "./src/app/employees/employees.component.css")).default]
+    }),
+    __metadata("design:paramtypes", [])
+], EmployeesComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/employees/employees.module.ts":
+/*!***********************************************!*\
+  !*** ./src/app/employees/employees.module.ts ***!
+  \***********************************************/
+/*! exports provided: EmployeesModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EmployeesModule", function() { return EmployeesModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _core_core_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/core.module */ "./src/app/core/core.module.ts");
+/* harmony import */ var _shared_angular_material_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../shared/angular-material.module */ "./src/app/shared/angular-material.module.ts");
+/* harmony import */ var _employees_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./employees-routing.module */ "./src/app/employees/employees-routing.module.ts");
+/* harmony import */ var _employees_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./employees.service */ "./src/app/employees/employees.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+let EmployeesModule = class EmployeesModule {
+};
+EmployeesModule = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+        declarations: [_employees_routing_module__WEBPACK_IMPORTED_MODULE_5__["EmployeesRoutingModule"].routedComponents],
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+            _employees_routing_module__WEBPACK_IMPORTED_MODULE_5__["EmployeesRoutingModule"],
+            _shared_angular_material_module__WEBPACK_IMPORTED_MODULE_4__["AngularMaterialModule"],
+            _core_core_module__WEBPACK_IMPORTED_MODULE_3__["CoreModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"]
+        ],
+        providers: [_employees_service__WEBPACK_IMPORTED_MODULE_6__["EmployeesService"]],
+    })
+], EmployeesModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/employees/employees.service.ts":
+/*!************************************************!*\
+  !*** ./src/app/employees/employees.service.ts ***!
+  \************************************************/
+/*! exports provided: EmployeesService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EmployeesService", function() { return EmployeesService; });
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _core_services_application_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/services/application.service */ "./src/app/core/services/application.service.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+let EmployeesService = class EmployeesService {
+    constructor(http, applicationService) {
+        this.http = http;
+        this.applicationService = applicationService;
+    }
+    getEmployee(id) {
+        return this.http.get(`${this.applicationService.baseUrl}api/Employees/${id}`);
+    }
+    listEmployees() {
+        return this.http.get(`${this.applicationService.baseUrl}api/Employees`);
+    }
+    saveEmployee(employee) {
+        return this.http.post(`${this.applicationService.baseUrl}api/Employees`, employee);
+    }
+    modifyEmployee(employee) {
+        return this.http.put(`${this.applicationService.baseUrl}api/Employees/${employee.id}`, employee);
+    }
+    deleteEmployee(id) {
+        return this.http.delete(`${this.applicationService.baseUrl}api/Employees/${id}`);
+    }
+};
+EmployeesService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"] },
+    { type: _core_services_application_service__WEBPACK_IMPORTED_MODULE_1__["ApplicationService"] }
+];
+EmployeesService = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])(),
+    __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"],
+        _core_services_application_service__WEBPACK_IMPORTED_MODULE_1__["ApplicationService"]])
+], EmployeesService);
+
+
+
+/***/ })
+
+}]);
+//# sourceMappingURL=employees-employees-module.js.map

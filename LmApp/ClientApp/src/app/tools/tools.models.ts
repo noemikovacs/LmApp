@@ -6,3 +6,5 @@ export interface Tool {
     vendor: string;
     licenses: Array<License>;
 }
+
+

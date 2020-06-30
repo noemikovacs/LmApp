@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>tools-list works!</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1>Tools</h1>\r\n<p>Many tools in the list</p>\r\n\r\n<div class=\"example-button-row\">\r\n    <button mat-raised-button [routerLink]='[\"../edit\"]' color=\"primary\">Add</button>\r\n</div>\r\n<br>\r\n\r\n<mat-form-field>\r\n    <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\r\n</mat-form-field>\r\n\r\n\r\n<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\r\n\r\n    <ng-container matColumnDef=\"name\">\r\n        <th mat-header-cell *matHeaderCellDef style=\"width:21%\"> Name </th>\r\n        <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\r\n    </ng-container>\r\n\r\n\r\n    <ng-container matColumnDef=\"vendor\">\r\n        <th mat-header-cell *matHeaderCellDef style=\"width:21%\"> Vendor </th>\r\n        <td mat-cell *matCellDef=\"let element\"> {{element.vendor}} </td>\r\n    </ng-container>\r\n\r\n    <ng-container matColumnDef=\"licenses\">\r\n        <th mat-header-cell *matHeaderCellDef style=\"width:21%\"> Licenses </th>\r\n        <td mat-cell *matCellDef=\"let element\"> {{element.licenses}} </td>\r\n    </ng-container>\r\n\r\n\r\n    Action Column\r\n    <ng-container matColumnDef=\"action\">\r\n        <th mat-header-cell *matHeaderCellDef style=\"width:10%\"> Action </th>\r\n        <td mat-cell *matCellDef=\"let tool\">\r\n            <button mat-icon-button matTooltip=\"Edit\" [matTooltipPosition]=\"'after'\">\r\n                <mat-icon aria-label=\"Example icon-button with a heart icon\" [routerLink]=\"['../edit', tool.id]\">edit</mat-icon>\r\n            </button>\r\n\r\n            <button mat-icon-button matTooltip=\"Delete\" [matTooltipPosition]=\"'after'\">\r\n                <mat-icon aria-label=\"Example icon-button with a heart icon \" (click)=\"deleteTool(tool)\">delete</mat-icon>\r\n            </button>\r\n        </td>\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n</table>\r\n<mat-progress-bar mode=\"indeterminate\" *ngIf=\"!tool\"></mat-progress-bar>\r\n\r\n");
 
 /***/ }),
 
@@ -35,7 +35,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>tools works!</p>\n<router-outlet></router-outlet>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<router-outlet></router-outlet>\n");
 
 /***/ }),
 
@@ -118,6 +118,8 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ToolsListComponent", function() { return ToolsListComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _tools_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../tools.service */ "./src/app/tools/tools.service.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -127,22 +129,63 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
+
+
 let ToolsListComponent = class ToolsListComponent {
-    constructor() { }
+    constructor(toolsService) {
+        this.toolsService = toolsService;
+        this.displayedColumns = ['name', 'vendor', 'licenses', 'action'];
+        this.isloading = false;
+    }
     ngOnInit() {
+        this.loadTools();
+    }
+    loadTools() {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                this.toolsService.listTools().subscribe(res => {
+                    this.tools = res;
+                    this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](this.tools);
+                    this.isloading = true;
+                });
+            }
+            catch (err) {
+                console.error(`this is not good: ${err.Message}`);
+                this.isloading = false;
+            }
+        });
+    }
+    applyFilter(filterValue) {
+        this.dataSource.filter = filterValue.trim().toLowerCase();
+    }
+    deleteTool(tool) {
+        this.toolsService.deleteTool(tool.id).subscribe(x => {
+            this.loadTools();
+        });
     }
 };
+ToolsListComponent.ctorParameters = () => [
+    { type: _tools_service__WEBPACK_IMPORTED_MODULE_1__["ToolsService"] }
+];
 ToolsListComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
         selector: 'app-tools-list',
         template: __importDefault(__webpack_require__(/*! raw-loader!./tools-list.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/tools/tools-list/tools-list.component.html")).default,
         styles: [__importDefault(__webpack_require__(/*! ./tools-list.component.css */ "./src/app/tools/tools-list/tools-list.component.css")).default]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [_tools_service__WEBPACK_IMPORTED_MODULE_1__["ToolsService"]])
 ], ToolsListComponent);
 
 

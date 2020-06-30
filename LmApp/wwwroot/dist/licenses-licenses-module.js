@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1>Licenses</h1>\r\n\r\n<p>Many licenses in the list</p>\r\n\r\n<div class=\"example-button-row\">\r\n    <button mat-raised-button [routerLink]='[\"../edit\"]' color=\"primary\">Add</button>\r\n</div>\r\n<br>\r\n\r\n<mat-form-field>\r\n    <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\r\n</mat-form-field>\r\n\r\n\r\n<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\r\n\r\n    <ng-container matColumnDef=\"serialNr\">\r\n        <th mat-header-cell *matHeaderCellDef style=\"width:21%\"> Serial Number </th>\r\n        <td mat-cell *matCellDef=\"let element\"> {{element.serialNr}} </td>\r\n    </ng-container>\r\n\r\n\r\n    <ng-container matColumnDef=\"expirationDate\">\r\n        <th mat-header-cell *matHeaderCellDef style=\"width:21%\"> Expiration Date </th>\r\n        <td mat-cell *matCellDef=\"let element\"> {{element.expirationDate}} </td>\r\n    </ng-container>\r\n\r\n    <ng-container matColumnDef=\"fkTool\">\r\n        <th mat-header-cell *matHeaderCellDef style=\"width:21%\"> Tool ID </th>\r\n        <td mat-cell *matCellDef=\"let element\"> {{element.fkTool}} </td>\r\n    </ng-container>\r\n\r\n\r\n    Action Column\r\n    <ng-container matColumnDef=\"action\">\r\n        <th mat-header-cell *matHeaderCellDef style=\"width:10%\"> Action </th>\r\n        <td mat-cell *matCellDef=\"let license\">\r\n            <button mat-icon-button matTooltip=\"Edit\" [matTooltipPosition]=\"'after'\">\r\n                <mat-icon aria-label=\"Example icon-button with a heart icon\" [routerLink]=\"['../edit', license.id]\">edit</mat-icon>\r\n            </button>\r\n\r\n            <button mat-icon-button matTooltip=\"Delete\" [matTooltipPosition]=\"'after'\">\r\n                <mat-icon aria-label=\"Example icon-button with a heart icon \" (click)=\"deleteLicense(license)\">delete</mat-icon>\r\n            </button>\r\n        </td>\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n</table>\r\n<mat-progress-bar mode=\"indeterminate\" *ngIf=\"!license\"></mat-progress-bar>\r\n\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1>Licenses</h1>\r\n\r\n<p>Many licenses in the list</p>\r\n\r\n<div class=\"example-button-row\">\r\n    <button mat-raised-button [routerLink]='[\"../edit\"]' color=\"primary\">Add</button>\r\n</div>\r\n<br>\r\n\r\n<mat-form-field>\r\n    <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\r\n</mat-form-field>\r\n\r\n\r\n<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\r\n\r\n    <ng-container matColumnDef=\"serialNr\">\r\n        <th mat-header-cell *matHeaderCellDef style=\"width:21%\"> Serial Number </th>\r\n        <td mat-cell *matCellDef=\"let element\"> {{element.serialNr}} </td>\r\n    </ng-container>\r\n\r\n\r\n    <ng-container matColumnDef=\"expirationDate\">\r\n        <th mat-header-cell *matHeaderCellDef style=\"width:21%\"> Expiration Date </th>\r\n        <td mat-cell *matCellDef=\"let element\"> {{element.expirationDate}} </td>\r\n    </ng-container>\r\n\r\n    <ng-container matColumnDef=\"fkTool\">\r\n        <th mat-header-cell *matHeaderCellDef style=\"width:21%\"> Tool ID </th>\r\n        <td mat-cell *matCellDef=\"let element\"> {{element.fkTool}} </td>\r\n    </ng-container>\r\n\r\n\r\n    Action Column\r\n    <ng-container matColumnDef=\"action\">\r\n        <th mat-header-cell *matHeaderCellDef style=\"width:10%\"> Action </th>\r\n        <td mat-cell *matCellDef=\"let license\">\r\n            <button mat-icon-button matTooltip=\"Edit\" [matTooltipPosition]=\"'after'\">\r\n                <mat-icon aria-label=\"Example icon-button with a heart icon\" [routerLink]=\"['../edit', license.id]\">edit</mat-icon>\r\n            </button>\r\n\r\n            <button mat-icon-button matTooltip=\"Delete\" [matTooltipPosition]=\"'after'\">\r\n                <mat-icon aria-label=\"Example icon-button with a heart icon \" (click)=\"deleteLicense(license)\">delete</mat-icon>\r\n            </button>\r\n        </td>\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n</table>\r\n\r\n<mat-progress-bar mode=\"indeterminate\" *ngIf=\"!license\"></mat-progress-bar>\r\n<mat-paginator [pageSizeOptions]=\"[5, 10, 20]\" showFirstLastButtons></mat-paginator>\r\n\r\n\r\n");
 
 /***/ }),
 
@@ -48,7 +48,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2xpY2Vuc2VzL2xpY2Vuc2VzLWVkaXQvbGljZW5zZXMtZWRpdC5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".example-container {\r\n    display: flex;\r\n    flex-direction: column;\r\n    padding: 5px;\r\n    margin-bottom: 10px;\r\n}\r\n\r\n    .example-container > * {\r\n        width: 100%;\r\n    }\r\n\r\n    body {\r\n    background-image: none;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGljZW5zZXMvbGljZW5zZXMtZWRpdC9saWNlbnNlcy1lZGl0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxhQUFhO0lBQ2Isc0JBQXNCO0lBQ3RCLFlBQVk7SUFDWixtQkFBbUI7QUFDdkI7O0lBRUk7UUFDSSxXQUFXO0lBQ2Y7O0lBR0o7SUFDSSxzQkFBc0I7QUFDMUIiLCJmaWxlIjoic3JjL2FwcC9saWNlbnNlcy9saWNlbnNlcy1lZGl0L2xpY2Vuc2VzLWVkaXQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5leGFtcGxlLWNvbnRhaW5lciB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICAgIHBhZGRpbmc6IDVweDtcclxuICAgIG1hcmdpbi1ib3R0b206IDEwcHg7XHJcbn1cclxuXHJcbiAgICAuZXhhbXBsZS1jb250YWluZXIgPiAqIHtcclxuICAgICAgICB3aWR0aDogMTAwJTtcclxuICAgIH1cclxuXHJcblxyXG5ib2R5IHtcclxuICAgIGJhY2tncm91bmQtaW1hZ2U6IG5vbmU7XHJcbn1cclxuIl19 */");
 
 /***/ }),
 
@@ -163,7 +163,7 @@ LicensesEditComponent = __decorate([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2xpY2Vuc2VzL2xpY2Vuc2VzLWxpc3QvbGljZW5zZXMtbGlzdC5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("table {\r\n    width: 100%;\r\n}\r\n\r\n.mat-form-field {\r\n    font-size: 14px;\r\n    width: 100%;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGljZW5zZXMvbGljZW5zZXMtbGlzdC9saWNlbnNlcy1saXN0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxXQUFXO0FBQ2Y7O0FBRUE7SUFDSSxlQUFlO0lBQ2YsV0FBVztBQUNmIiwiZmlsZSI6InNyYy9hcHAvbGljZW5zZXMvbGljZW5zZXMtbGlzdC9saWNlbnNlcy1saXN0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJ0YWJsZSB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuLm1hdC1mb3JtLWZpZWxkIHtcclxuICAgIGZvbnQtc2l6ZTogMTRweDtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG59XHJcbiJdfQ== */");
 
 /***/ }),
 
@@ -219,6 +219,7 @@ let LicensesListComponent = class LicensesListComponent {
                     this.licenses = res;
                     this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](this.licenses);
                     this.isloading = true;
+                    this.dataSource.paginator = this.paginator;
                 });
             }
             catch (err) {
@@ -239,6 +240,10 @@ let LicensesListComponent = class LicensesListComponent {
 LicensesListComponent.ctorParameters = () => [
     { type: _licenses_service__WEBPACK_IMPORTED_MODULE_1__["LicensesService"] }
 ];
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatPaginator"], { static: true }),
+    __metadata("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatPaginator"])
+], LicensesListComponent.prototype, "paginator", void 0);
 LicensesListComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
         selector: 'app-licenses-list',

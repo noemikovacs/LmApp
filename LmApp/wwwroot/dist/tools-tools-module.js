@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>tools-edit works!</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<p>Add/Edit tools</p>\r\n\r\n<mat-card class=\"example-card\">\r\n    <form *ngIf=\"formGroup\" [formGroup]=\"formGroup\">\r\n        <div class=\"example-container\">\r\n\r\n            <mat-form-field>\r\n                <input matInput placeholder=\"Name\" formControlName=\"name\" type=\"text\">\r\n                <mat-error *ngIf=\"formGroup.get('name').touched && formGroup.get('name').errors && formGroup.get('name').errors.required\">\r\n                    Name required!\r\n                </mat-error>\r\n            </mat-form-field>\r\n\r\n            <mat-form-field>\r\n                <input matInput placeholder=\"Vendor\" formControlName=\"vendor\" type=\"text\">\r\n                <mat-error *ngIf=\"formGroup.get('vendor').touched && formGroup.get('vendor').errors && formGroup.get('vendor').errors.required\">\r\n                    Vendor required!\r\n                </mat-error>\r\n            </mat-form-field>\r\n\r\n        </div>\r\n        <div class=\"example-button-row\">\r\n            <button mat-raised-button color=\"primary\" (click)=\"save()\">Save</button>\r\n            <button mat-raised-button color=\"primary\" [routerLink]='routerLink'>Cancel</button>\r\n        </div>\r\n    </form>\r\n</mat-card>\r\n\r\n");
 
 /***/ }),
 
@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1>Tools</h1>\r\n<p>Many tools in the list</p>\r\n\r\n<div class=\"example-button-row\">\r\n    <button mat-raised-button [routerLink]='[\"../edit\"]' color=\"primary\">Add</button>\r\n</div>\r\n<br>\r\n\r\n<mat-form-field>\r\n    <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\r\n</mat-form-field>\r\n\r\n\r\n<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\r\n\r\n    <ng-container matColumnDef=\"name\">\r\n        <th mat-header-cell *matHeaderCellDef style=\"width:21%\"> Name </th>\r\n        <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\r\n    </ng-container>\r\n\r\n\r\n    <ng-container matColumnDef=\"vendor\">\r\n        <th mat-header-cell *matHeaderCellDef style=\"width:21%\"> Vendor </th>\r\n        <td mat-cell *matCellDef=\"let element\"> {{element.vendor}} </td>\r\n    </ng-container>\r\n\r\n    <ng-container matColumnDef=\"licenses\">\r\n        <th mat-header-cell *matHeaderCellDef style=\"width:21%\"> Licenses </th>\r\n        <td mat-cell *matCellDef=\"let element\"> {{element.licenses}} </td>\r\n    </ng-container>\r\n\r\n\r\n    Action Column\r\n    <ng-container matColumnDef=\"action\">\r\n        <th mat-header-cell *matHeaderCellDef style=\"width:10%\"> Action </th>\r\n        <td mat-cell *matCellDef=\"let tool\">\r\n            <button mat-icon-button matTooltip=\"Edit\" [matTooltipPosition]=\"'after'\">\r\n                <mat-icon aria-label=\"Example icon-button with a heart icon\" [routerLink]=\"['../edit', tool.id]\">edit</mat-icon>\r\n            </button>\r\n\r\n            <button mat-icon-button matTooltip=\"Delete\" [matTooltipPosition]=\"'after'\">\r\n                <mat-icon aria-label=\"Example icon-button with a heart icon \" (click)=\"deleteTool(tool)\">delete</mat-icon>\r\n            </button>\r\n        </td>\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n</table>\r\n<mat-progress-bar mode=\"indeterminate\" *ngIf=\"!tool\"></mat-progress-bar>\r\n\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1>Tools</h1>\r\n<p>Many tools in the list</p>\r\n\r\n<div class=\"example-button-row\">\r\n    <button mat-raised-button [routerLink]='[\"../edit\"]' color=\"primary\">Add</button>\r\n</div>\r\n<br>\r\n\r\n<mat-form-field>\r\n    <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\r\n</mat-form-field>\r\n\r\n\r\n<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\r\n\r\n    <ng-container matColumnDef=\"id\">\r\n        <th mat-header-cell *matHeaderCellDef style=\"width:21%\"> ToolID </th>\r\n        <td mat-cell *matCellDef=\"let element\"> {{element.id}} </td>\r\n    </ng-container>\r\n\r\n    <ng-container matColumnDef=\"name\">\r\n        <th mat-header-cell *matHeaderCellDef style=\"width:21%\"> Name </th>\r\n        <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\r\n    </ng-container>\r\n\r\n\r\n    <ng-container matColumnDef=\"vendor\">\r\n        <th mat-header-cell *matHeaderCellDef style=\"width:21%\"> Vendor </th>\r\n        <td mat-cell *matCellDef=\"let element\"> {{element.vendor}} </td>\r\n    </ng-container>\r\n\r\n    Action Column\r\n    <ng-container matColumnDef=\"action\">\r\n        <th mat-header-cell *matHeaderCellDef style=\"width:10%\"> Action </th>\r\n        <td mat-cell *matCellDef=\"let tool\">\r\n            <button mat-icon-button matTooltip=\"Edit\" [matTooltipPosition]=\"'after'\">\r\n                <mat-icon aria-label=\"Example icon-button with a heart icon\" [routerLink]=\"['../edit', tool.id]\">edit</mat-icon>\r\n            </button>\r\n\r\n            <button mat-icon-button matTooltip=\"Delete\" [matTooltipPosition]=\"'after'\">\r\n                <mat-icon aria-label=\"Example icon-button with a heart icon \" (click)=\"deleteTool(tool)\">delete</mat-icon>\r\n            </button>\r\n        </td>\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n</table>\r\n<mat-progress-bar mode=\"indeterminate\" *ngIf=\"!tool\"></mat-progress-bar>\r\n<mat-paginator [pageSizeOptions]=\"[5, 10, 20]\" showFirstLastButtons></mat-paginator>\r\n\r\n");
 
 /***/ }),
 
@@ -48,7 +48,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Rvb2xzL3Rvb2xzLWVkaXQvdG9vbHMtZWRpdC5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".example-container {\r\n    display: flex;\r\n    flex-direction: column;\r\n    padding: 5px;\r\n    margin-bottom: 10px;\r\n}\r\n\r\n    .example-container > * {\r\n        width: 100%;\r\n    }\r\n\r\n    body {\r\n    background-image: none;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdG9vbHMvdG9vbHMtZWRpdC90b29scy1lZGl0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxhQUFhO0lBQ2Isc0JBQXNCO0lBQ3RCLFlBQVk7SUFDWixtQkFBbUI7QUFDdkI7O0lBRUk7UUFDSSxXQUFXO0lBQ2Y7O0lBR0o7SUFDSSxzQkFBc0I7QUFDMUIiLCJmaWxlIjoic3JjL2FwcC90b29scy90b29scy1lZGl0L3Rvb2xzLWVkaXQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5leGFtcGxlLWNvbnRhaW5lciB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICAgIHBhZGRpbmc6IDVweDtcclxuICAgIG1hcmdpbi1ib3R0b206IDEwcHg7XHJcbn1cclxuXHJcbiAgICAuZXhhbXBsZS1jb250YWluZXIgPiAqIHtcclxuICAgICAgICB3aWR0aDogMTAwJTtcclxuICAgIH1cclxuXHJcblxyXG5ib2R5IHtcclxuICAgIGJhY2tncm91bmQtaW1hZ2U6IG5vbmU7XHJcbn1cclxuIl19 */");
 
 /***/ }),
 
@@ -63,6 +63,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ToolsEditComponent", function() { return ToolsEditComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _tools_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../tools.service */ "./src/app/tools/tools.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -76,18 +79,74 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
+
+
+
 let ToolsEditComponent = class ToolsEditComponent {
-    constructor() { }
+    constructor(router, route, toolsService, formBuilder) {
+        this.router = router;
+        this.route = route;
+        this.toolsService = toolsService;
+        this.formBuilder = formBuilder;
+        this.routerLink = '../list';
+        this.isEdit = false;
+    }
     ngOnInit() {
+        this.toolID = parseInt(this.route.snapshot.params['id']);
+        if (this.toolID) {
+            this.routerLink = '../../list';
+            this.toolsService.getTool(this.toolID).subscribe(res => {
+                this.initForm(res);
+                this.isEdit = true;
+            });
+        }
+        else {
+            this.initForm({});
+        }
+    }
+    save() {
+        Object.keys(this.formGroup.controls).forEach(control => {
+            this.formGroup.get(control).markAsTouched();
+        });
+        if (this.formGroup.valid) {
+            let tool = this.formGroup.value;
+            tool.name = tool.name;
+            if (this.isEdit) {
+                tool.id = this.toolID;
+                this.toolsService.modifyTool(tool).subscribe(res => {
+                    this.router.navigate(['/tools']);
+                });
+            }
+            else {
+                this.toolsService.saveTool(tool).subscribe(res => {
+                    this.router.navigate(['/tools']);
+                });
+            }
+        }
+    }
+    initForm(tool) {
+        this.formGroup = this.formBuilder.group({
+            name: [tool.name, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            vendor: [tool.vendor, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]
+        });
     }
 };
+ToolsEditComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
+    { type: _tools_service__WEBPACK_IMPORTED_MODULE_3__["ToolsService"] },
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] }
+];
 ToolsEditComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
         selector: 'app-tools-edit',
         template: __importDefault(__webpack_require__(/*! raw-loader!./tools-edit.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/tools/tools-edit/tools-edit.component.html")).default,
         styles: [__importDefault(__webpack_require__(/*! ./tools-edit.component.css */ "./src/app/tools/tools-edit/tools-edit.component.css")).default]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
+        _tools_service__WEBPACK_IMPORTED_MODULE_3__["ToolsService"],
+        _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]])
 ], ToolsEditComponent);
 
 
@@ -103,7 +162,7 @@ ToolsEditComponent = __decorate([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Rvb2xzL3Rvb2xzLWxpc3QvdG9vbHMtbGlzdC5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("table {\r\n    width: 100%;\r\n}\r\n\r\n.mat-form-field {\r\n    font-size: 14px;\r\n    width: 100%;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdG9vbHMvdG9vbHMtbGlzdC90b29scy1saXN0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxXQUFXO0FBQ2Y7O0FBRUE7SUFDSSxlQUFlO0lBQ2YsV0FBVztBQUNmIiwiZmlsZSI6InNyYy9hcHAvdG9vbHMvdG9vbHMtbGlzdC90b29scy1saXN0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJ0YWJsZSB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuLm1hdC1mb3JtLWZpZWxkIHtcclxuICAgIGZvbnQtc2l6ZTogMTRweDtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG59XHJcbiJdfQ== */");
 
 /***/ }),
 
@@ -146,7 +205,7 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 let ToolsListComponent = class ToolsListComponent {
     constructor(toolsService) {
         this.toolsService = toolsService;
-        this.displayedColumns = ['name', 'vendor', 'licenses', 'action'];
+        this.displayedColumns = ['id', 'name', 'vendor', 'action'];
         this.isloading = false;
     }
     ngOnInit() {
@@ -159,6 +218,7 @@ let ToolsListComponent = class ToolsListComponent {
                     this.tools = res;
                     this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](this.tools);
                     this.isloading = true;
+                    this.dataSource.paginator = this.paginator;
                 });
             }
             catch (err) {
@@ -179,6 +239,10 @@ let ToolsListComponent = class ToolsListComponent {
 ToolsListComponent.ctorParameters = () => [
     { type: _tools_service__WEBPACK_IMPORTED_MODULE_1__["ToolsService"] }
 ];
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatPaginator"], { static: true }),
+    __metadata("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatPaginator"])
+], ToolsListComponent.prototype, "paginator", void 0);
 ToolsListComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
         selector: 'app-tools-list',

@@ -11,36 +11,39 @@
     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
 </mat-form-field>
 
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
-    <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef style="width:21%"> Name </th>
-        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-    </ng-container>
-
-
-    <ng-container matColumnDef="position">
-        <th mat-header-cell *matHeaderCellDef style="width:21%"> Position </th>
-        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-    </ng-container>
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef style="width:21%"> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
 
 
-    Action Column
-    <ng-container matColumnDef="action">
-        <th mat-header-cell *matHeaderCellDef style="width:10%"> Action </th>
-        <td mat-cell *matCellDef="let employee">
-            <button mat-icon-button matTooltip="Edit" [matTooltipPosition]="'after'">
-                <mat-icon aria-label="Example icon-button with a heart icon" [routerLink]="['../edit', employee.id]">edit</mat-icon>
-            </button>
+        <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef style="width:21%"> Position </th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
 
-            <button mat-icon-button matTooltip="Delete" [matTooltipPosition]="'after'">
-                <mat-icon aria-label="Example icon-button with a heart icon " (click)="deleteEmployee(employee)">delete</mat-icon>
-            </button>
-        </td>
-    </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
-<mat-progress-bar mode="indeterminate" *ngIf="!employees"></mat-progress-bar>
+        Action Column
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef style="width:10%"> Action </th>
+            <td mat-cell *matCellDef="let employee">
+                <button mat-icon-button matTooltip="Edit" [matTooltipPosition]="'after'">
+                    <mat-icon aria-label="Example icon-button with a heart icon" [routerLink]="['../edit', employee.id]">edit</mat-icon>
+                </button>
+
+                <button mat-icon-button matTooltip="Delete" [matTooltipPosition]="'after'">
+                    <mat-icon aria-label="Example icon-button with a heart icon " (click)="deleteEmployee(employee)">delete</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-progress-bar mode="indeterminate" *ngIf="!employees"></mat-progress-bar>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+</div>

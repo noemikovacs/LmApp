@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { License } from '../licenses.models';
 import { LicensesService } from '../licenses.service';
-import { MatTableDataSource } from '@angular/material';
+import { MatTableDataSource, MatPaginator } from '@angular/material';
 
 @Component({
   selector: 'app-licenses-list',
@@ -18,6 +18,8 @@ export class LicensesListComponent implements OnInit {
 
     constructor(private licensesService: LicensesService) { }
 
+    @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+
     ngOnInit() {
         this.loadLicenses();
     }
@@ -30,6 +32,7 @@ export class LicensesListComponent implements OnInit {
                 this.licenses = res;
                 this.dataSource = new MatTableDataSource(this.licenses);
                 this.isloading = true;
+                this.dataSource.paginator = this.paginator;
             });
         } catch (err) {
             console.error(`this is not good: ${err.Message}`);

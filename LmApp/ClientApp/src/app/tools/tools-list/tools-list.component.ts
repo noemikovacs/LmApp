@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Tool } from '../tools.models';
 import { ToolsService } from '../tools.service';
-import { MatTableDataSource } from '@angular/material';
+import { MatTableDataSource, MatPaginator } from '@angular/material';
 
 @Component({
   selector: 'app-tools-list',
@@ -10,13 +10,17 @@ import { MatTableDataSource } from '@angular/material';
 })
 export class ToolsListComponent implements OnInit {
 
-    public displayedColumns: string[] = ['name', 'vendor', 'licenses', 'action'];
+    public displayedColumns: string[] = ['id','name', 'vendor', 'action'];
     public tools: Tool[];
 
     public dataSource;
     public isloading = false;
 
     constructor(private toolsService: ToolsService) { }
+
+    @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+
+
 
     ngOnInit() {
         this.loadTools();
@@ -28,6 +32,7 @@ export class ToolsListComponent implements OnInit {
                 this.tools = res;
                 this.dataSource = new MatTableDataSource(this.tools);
                 this.isloading = true;
+                this.dataSource.paginator = this.paginator;
             });
         } catch (err) {
             console.error(`this is not good: ${err.Message}`);

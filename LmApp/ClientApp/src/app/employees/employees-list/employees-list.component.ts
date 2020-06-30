@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Employee } from '../employees.models';
 import { EmployeesService } from '../employees.service';
-import { MatTableDataSource } from '@angular/material';
+import { MatTableDataSource, MatPaginator } from '@angular/material';
 
 @Component({
   selector: 'app-employees-list',
@@ -18,11 +18,12 @@ export class EmployeesListComponent implements OnInit {
 
     constructor(private employeesService: EmployeesService) { }
 
+    @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+
     ngOnInit() {
         this.loadEmployees();
+        
     }
-
-
 
     async loadEmployees() {
         try {
@@ -30,6 +31,7 @@ export class EmployeesListComponent implements OnInit {
                 this.employees = res;
                 this.dataSource = new MatTableDataSource(this.employees);
                 this.isloading = true;
+                this.dataSource.paginator = this.paginator;
             });
         } catch (err) {
             console.error(`this is not good: ${err.Message}`);

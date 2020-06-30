@@ -215,8 +215,8 @@ let EmployeesListComponent = class EmployeesListComponent {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 this.employeesService.listEmployees().subscribe(res => {
-                    this.movies = res;
-                    this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](this.movies);
+                    this.employees = res;
+                    this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](this.employees);
                     this.isloading = true;
                 });
             }

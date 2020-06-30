@@ -11,7 +11,7 @@ import { MatTableDataSource } from '@angular/material';
 export class EmployeesListComponent implements OnInit {
 
     public displayedColumns: string[] = ['name', 'position', 'action'];
-    public movies: Employee[];
+    public employees: Employee[];
 
     public dataSource;
     public isloading = false;
@@ -27,8 +27,8 @@ export class EmployeesListComponent implements OnInit {
     async loadEmployees() {
         try {
             this.employeesService.listEmployees().subscribe(res => {
-                this.movies = res;
-                this.dataSource = new MatTableDataSource(this.movies);
+                this.employees = res;
+                this.dataSource = new MatTableDataSource(this.employees);
                 this.isloading = true;
             });
         } catch (err) {

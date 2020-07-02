@@ -28,8 +28,10 @@ namespace LmApp.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<License>>> GetLicenses()
         {
-            return await _context.Licenses.ToListAsync();
-
+            IQueryable<License> result = _context.Licenses;
+            var resultList = await result.OrderByDescending(t => t.ExpirationDate).ToListAsync();
+            //return await _context.Licenses.ToListAsync();
+            return resultList;
 
         }
 

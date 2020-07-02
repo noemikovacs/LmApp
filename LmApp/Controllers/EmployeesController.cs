@@ -28,7 +28,11 @@ namespace LmApp.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Employee>>> GetEmployees()
         {
-            return await _context.Employees.ToListAsync();
+            //return await _context.Employees.ToListAsync();
+            IQueryable<Employee> result = _context.Employees;
+            var resultList = await result.OrderByDescending(t => t.Name).ToListAsync();
+            //return await _context.Licenses.ToListAsync();
+            return resultList;
         }
 
         // GET: api/Employees/5

@@ -34,6 +34,7 @@ namespace LmApp.Controllers
 
                 var resultList = await result
                  .Include(f => f.Licenses)
+                 .OrderByDescending(t => t.Id)
                  .ToListAsync();
                 return resultList;
             }

@@ -26,7 +26,9 @@ namespace LmApp.Controllers
         /// </summary>
         /// <returns>Returns all of the license</returns>
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<License>>> GetLicenses()
+        public async Task<ActionResult<IEnumerable<License>>> GetLicenses(
+            [FromQuery]int page = 0,
+            [FromQuery]int itemsPerPage = 5)
         {
             IQueryable<License> result = _context.Licenses;
             var resultList = await result.OrderByDescending(t => t.ExpirationDate).ToListAsync();

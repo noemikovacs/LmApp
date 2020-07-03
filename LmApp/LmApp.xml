@@ -73,7 +73,7 @@
             <param name="id">The ID we're searching for</param>
             <returns>The deleted item</returns>
         </member>
-        <member name="M:LmApp.Controllers.LicensesController.GetLicenses">
+        <member name="M:LmApp.Controllers.LicensesController.GetLicenses(System.Int32,System.Int32)">
             <summary>
              List of licenses
             </summary>

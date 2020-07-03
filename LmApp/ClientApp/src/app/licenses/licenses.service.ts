@@ -18,6 +18,7 @@ export class LicensesService {
         return this.http.get<License[]>(`${this.applicationService.baseUrl}api/Licenses`);
     }
 
+
     saveLicense(license: License) {
         return this.http.post(`${this.applicationService.baseUrl}api/Licenses`, license);
     }

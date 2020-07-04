@@ -787,7 +787,7 @@ let LoginComponent = class LoginComponent {
     }
     loginUser() {
         this.securityService.login(this.loginModel).subscribe(token => {
-            this.router.navigate(['/fetch-data']);
+            this.router.navigate(['/tools/list']);
         });
     }
 };
